@@ -4,6 +4,10 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 import asyncio
 from tinydb import TinyDB, Query
+from keep_alive import keep_alive
+
+keep_alive()
+
 db = TinyDB('db.json')
 
 User = Query()
